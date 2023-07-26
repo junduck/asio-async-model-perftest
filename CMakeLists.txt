@@ -52,10 +52,11 @@ add_executable(${PROJECT_NAME}
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
 target_compile_options(${PROJECT_NAME} PRIVATE
-    -std=c++20 -fcoroutines
+    -std=c++20 -stdlib=libc++
     )
 target_link_libraries(${PROJECT_NAME} PRIVATE
   ${Boost_LIBRARIES}
-  stdc++fs
+  c++
+  c++abi
   ${CMAKE_THREAD_LIBS_INIT}
   )

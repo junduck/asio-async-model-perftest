@@ -4,7 +4,6 @@
 #include <iostream>
 #include <ranges>
 #include <span>
-#include <syncstream>
 #include <thread>
 #include <coroutine>
 #include <utility>
@@ -43,7 +42,7 @@ class Generator {
         void unhandled_exception() { throw; }
 
         auto yield_value(T&& value) {
-            value_ = move(value);
+            value_ = std::move(value);
             return suspend_always{};
         }
 

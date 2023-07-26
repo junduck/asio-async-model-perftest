@@ -20,7 +20,7 @@ using namespace std;
 
 Config config;
 
-int main(int argc, char **argv) {    
+int main(int argc, char **argv) {
     try {
         locale loc("");
     } catch (const std::exception& e) {
@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
             po::value<uint64_t>(&config.numSessions)->default_value(config.numSessions),
             "Number of \"sessions\" to run.")
         ("threads",
-            po::value<uint64_t>(&config.numThreads)->default_value(config.numThreads),
+            po::value<size_t>(&config.numThreads)->default_value(config.numThreads),
             "Number of threads to use.")
         ("buffers",
             po::value<uint64_t>(&config.numBuffers)->default_value(config.numBuffers),

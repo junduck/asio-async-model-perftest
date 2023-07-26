@@ -8,7 +8,6 @@
 #include <algorithm>
 #include <optional>
 #include <forward_list>
-#include <syncstream>
 
 #include <boost/asio.hpp>
 #include <boost/asio/yield.hpp>

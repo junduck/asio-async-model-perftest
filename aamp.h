@@ -23,6 +23,7 @@ class Approach {
 public:
     virtual std::string name() const = 0;
     virtual void go() = 0;
+    virtual ~Approach() = default;
 };
 
 std::string format(uint64_t val, char sep = ' ');
